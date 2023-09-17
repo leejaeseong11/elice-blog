@@ -129,8 +129,8 @@
 }
 
 .popup-box {
-  width: 723px;
-  height: 910px;
+  width: 720px;
+  height: 810px;
   padding: 20px;
 
   position: absolute;
@@ -150,7 +150,8 @@
 }
 
 .pop-img {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 
   border-radius: 5px;
 }
