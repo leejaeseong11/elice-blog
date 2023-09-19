@@ -140,8 +140,6 @@
   flex-direction: column;
   justify-content: space-around;
 
-  overflow: auto;
-
   border-radius: 30px;
   background: #cef3ff;
 }
