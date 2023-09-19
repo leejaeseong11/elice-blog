@@ -160,6 +160,7 @@
   margin: 0 auto 20px auto;
 
   overflow: hidden;
+  object-fit: contain;
 
   border-radius: 5px;
 }
