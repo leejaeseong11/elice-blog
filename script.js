@@ -20,6 +20,35 @@ window.addEventListener('load', () => {
     element.addEventListener('click', toggleSelection);
   });
 
+  // 스크롤 시 nav 카테고리에 style 적용
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    const introduceTop = document.getElementById('introduce-area').offsetTop - 113;
+    const diaryTop = document.getElementById('diary-area').offsetTop - 113;
+    const playlistTop = document.getElementById('playlist-area').offsetTop - 113;
+
+    if (scrollY >= introduceTop && scrollY < diaryTop) {
+      applyToggleSelectionToCategory('introduce');
+    } else if (scrollY >= diaryTop && scrollY < playlistTop) {
+      applyToggleSelectionToCategory('diary');
+    } else {
+      applyToggleSelectionToCategory('playlist');
+    }
+  });
+
+  function applyToggleSelectionToCategory(category) {
+    const clickableElements = document.querySelectorAll('#nav-category > a');
+    clickableElements.forEach(element => {
+      element.classList.remove('selected');
+    });
+
+    const selectedLink = document.querySelector(`#nav-category > a[href="#${category}-area"]`);
+    if (selectedLink) {
+      selectedLink.classList.add('selected');
+    }
+  }
+
   // nav에 클릭된 요소로 이동하기 (nav bar만큼의 여백을 제외)
   const navLinks = document.querySelectorAll('#nav-category > a');
   navLinks.forEach(navLink => {

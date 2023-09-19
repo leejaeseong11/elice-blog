@@ -120,6 +120,7 @@
   align-items: center;
 
   z-index: 998;
+  box-sizing: border-box;
 }
 
 .popup .background {
@@ -129,8 +130,9 @@
 }
 
 .popup-box {
-  width: 720px;
-  height: 810px;
+  width: 90%;
+  max-width: 720px;
+  height: 90%;
   padding: 20px;
 
   position: absolute;
@@ -138,11 +140,15 @@
   flex-direction: column;
   justify-content: space-around;
 
+  overflow: auto;
+
   border-radius: 30px;
   background: #cef3ff;
 }
 
 .pop-title {
+  margin-bottom: 12px;
+
   color: #4d4d4d;
   font-family: Pretendard;
   font-size: 26px;
@@ -151,12 +157,16 @@
 
 .pop-img {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
+
+  overflow: hidden;
 
   border-radius: 5px;
 }
 
 .pop-detail {
+  margin: 12px 0;
+
   color: #4d4d4d;
   font-family: Pretendard;
   font-size: 24px;
@@ -174,6 +184,12 @@
 
   border: none;
   background-color: transparent;
+
+  display: block; /* 이미지를 보이도록 설정 */
+  position: absolute; /* 절대 위치로 설정 */
+  top: 10px; /* 원하는 위치로 조절 */
+  right: 20px; /* 원하는 위치로 조절 */
+  z-index: 999; /* 다른 요소 위에 표시되도록 설정 */
 }
 
 .hidden {

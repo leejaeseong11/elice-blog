@@ -17,7 +17,7 @@ a:visited {
 
 nav {
   width: 100%;
-  padding: 42px 36px 12px 42px;
+  padding: 12px 36px 0 42px;
   top: 0;
   left: 0;
 
@@ -28,7 +28,7 @@ nav {
 }
 
 #nav-category {
-  margin: 84px 60px 0 0;
+  margin: 44px 60px 0 0;
 
   float: right;
 }
@@ -39,6 +39,7 @@ nav {
   font-family: Pretendard;
   font-size: 24px;
   font-weight: 500;
+  white-space: nowrap;
 
   border-radius: 15px;
   color: #804cff;
@@ -52,12 +53,24 @@ nav {
   background-color: #9255ff !important;
 }
 
-#introduce-area {
+#nav-line {
   width: 95%;
   height: 1px;
-  margin: 178px auto 0 auto;
+  margin-top: 100px;
 
   clear: both;
 
   background-color: #979797;
+}
+
+#introduce-area {
+  margin: 113px auto 0 auto;
+}
+
+#nav-logo {
+  float: left;
+}
+
+img[alt='blog_logo'] {
+  height: 80px;
 }
